@@ -21,8 +21,8 @@ app.use(morgan('tiny'))
 //mongodb connection
 connectDB(); 
 
-
-
+//to ignore cors error
+app.use(cors())
 
 // parse request to body-parser
 app.use(bodyparser.urlencoded({ extended : true}));
