@@ -3,6 +3,7 @@ const axios = require ('axios')
 const { response } = require('express')
 
 exports.homeroute=(req,res)=>{
+    res.setHeader("Access-Control-Allow-Credentials","true");
     //make a get request to api users
     axios.get('http://localhost:3000/api/users')
     .then((response)=>{
